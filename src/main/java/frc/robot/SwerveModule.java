@@ -55,6 +55,10 @@ public class SwerveModule {
         setSpeed(desiredState, isOpenLoop);
     }
 
+    public TalonFX getDriveMotor() {
+        return mDriveMotor;
+    }
+
     private void setSpeed(SwerveModuleState desiredState, boolean isOpenLoop){
         if(isOpenLoop){
             driveDutyCycle.Output = desiredState.speedMetersPerSecond / Constants.Swerve.maxSpeed;
